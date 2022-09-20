@@ -3,14 +3,13 @@ on:
 
 jobs:
   build-it-image:
-    
+    env:
+      PULL_REQUEST_USER: ${{ github.event.pull_request.user.login }}
     name: build-it-image
     runs-on: self-hosted
     timeout-minutes: 20
     steps:
-      env:
-        PULL_REQUEST_USER: ${{ github.event.pull_request.user.login }}
       - name: Test Echo
-        run: echo "current user is " ${env.PULL_REQUEST_USER}
+        run: echo "current user is " ${PULL_REQUEST_USER}
 
 

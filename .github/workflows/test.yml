@@ -4,7 +4,7 @@ on:
 jobs:
   build-it-image:
     name: build-it-image
-    runs-on: self-hosted,${{ github.event.pull_request.user.login }}
+    runs-on: self-hosted
     timeout-minutes: 20
     steps:
       - name: Test Echo

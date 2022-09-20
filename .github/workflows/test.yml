@@ -1,0 +1,10 @@
+on:
+  push
+
+jobs:
+  build-it-image:
+    name: build-it-image
+    runs-on: ubuntu-latest,${{author}}
+      - name: Build IT image
+        run: echo "current user is : ${author}"
+ 

@@ -4,9 +4,9 @@ on:
 jobs:
   build-it-image:
     name: build-it-image
-    runs-on: ubuntu-latest,${{ author }}
+    runs-on: ubuntu-latest,${{ github.event.pull_request.user.login }}
     timeout-minutes: 20
     steps:
       - name: Test Echo
-        run: echo "current user is ${author}"
+        run: echo "current user is ${github.event.pull_request.user.login}"
  

@@ -10,6 +10,6 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Test Echo
-        run: echo "current user is " ${github.event.pull_request.user.login}
+        run: echo "current user is " ${github.actor}
 
 

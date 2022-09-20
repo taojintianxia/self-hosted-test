@@ -6,7 +6,7 @@ jobs:
     env:
       PULL_REQUEST_USER: ${{ github.actor }}
     name: build-it-image
-    runs-on: self-hosted
+    runs-on: [self-hosted, ${{ github.actor }}]
     timeout-minutes: 20
     steps:
       - name: Test Echo
